@@ -321,3 +321,45 @@ body{
 
 
 
+@media screen and (max-width:560px){
+    .sub_container{
+        height: max-content;
+        width: 90%;
+        background: linear-gradient(120deg, rgb(34, 34, 34) 80%, rgb(245, 178, 55) 20%);   
+    }
+
+    .text_container{
+        height: max-content;
+        width: 100%;
+        margin-left: 2px;
+        margin-right: 40px;
+    }
+
+    .mainly_img{
+        height: 200px;
+        margin-bottom: 10px;
+    }
+
+    .sub_container_2{
+        width: 90%;
+    }
+
+    .about_me_img{
+        margin: 10px auto;
+        height: 240px;
+    }
+
+    .sub_container_3{
+        width: 90%;
+    }
+
+    .text_project{
+        height: max-content;
+        width: 100%;
+        padding: 8px;
+        margin: 10px 0px;
+    }
+}
+
+
+
