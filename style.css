@@ -4,9 +4,9 @@
 }
 
 body{
-    height: 100%;
     padding: 0;
-    margin: 0;  
+    margin: 0; 
+    height: max-content; 
 }
 
 :root{
@@ -27,7 +27,7 @@ body{
 .wrapper{
     display: flex;
     flex-flow: column wrap;
-    width: 90%;
+    width: 100%;
     height: 100%;
     align-items: center;
     margin: 0 auto; 
@@ -52,14 +52,14 @@ body{
     margin: 0;  
 }
 
-figure{
+.spc_figure{
     padding: 0;
     margin: 0 auto 10px;
     width: 300px;
     height: 220px;
 }
 
-figure img{
+ .spc_figure img{
     object-fit: cover;
     width: 100%;
     height: 100%;
@@ -137,4 +137,107 @@ figure img{
     padding: 9px;
     gap: 2%;
 }
+
+.my_projects >  h1{
+    text-align: start;
+    border-bottom: 2px solid var(--buttonColors);
+    width: max-content;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.my_projects > p{
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+.wrapper_projects{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3,auto);
+}
+
+.wrapper_projects div:nth-child(1){
+    background-color: rgb(28, 117, 206);
+}
+
+.wrapper_projects div:nth-child(2){
+    background-color: rgb(122, 121, 121);
+}
+.wrapper_projects div:nth-child(3){
+    background-color: rgb(55, 182, 140);
+}
+
+.project_item{
+    grid-column: span 1;
+    grid-row: span 1;
+    height: 230px;
+    background-color: red;
+    margin: 3px;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 9px;
+    border-radius: 5% ;
+
+}
+
+.project_item > h1{
+   font-size: 20px;
+   font-family: inherit;
+   margin-bottom: 20px;
+}
+
+.project_item > h2{
+    font-family: inherit;
+    font-size: 18px;
+    text-align: start;
+}
+
+.project_item p{
+    font-family: sans-serif;
+}
+
+.project_item > a{
+    background-color: var(--buttonColors);
+    color: inherit;
+    padding: 10px;
+    border-radius: 10%;
+    margin: 5px 0px;
+}
+
+.gallery{
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+    margin: 0px auto; 
+    background-color: var(--divsBacks);
+    gap: 2%;
+}
+
+.gallery_wrapper{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 0.3%;
+    margin: 0;
+}
+
+.gallery_wrapper > figure{
+    margin: 0;
+    padding: 0;
+    height: 200px;
+}
+
+.gallery_wrapper > figure img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
 
