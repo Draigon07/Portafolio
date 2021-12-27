@@ -53,6 +53,7 @@ body{
 }
 
 .spc_figure{
+    display: block;
     padding: 0;
     margin: 0 auto 10px;
     width: 300px;
@@ -134,7 +135,6 @@ body{
     color: white;
     background-color: var(--divsBacks);
     font-family: 'Roboto','san-serif';
-    padding: 9px;
     gap: 2%;
 }
 
@@ -230,13 +230,113 @@ body{
 .gallery_wrapper > figure{
     margin: 0;
     padding: 0;
-    height: 200px;
 }
 
 .gallery_wrapper > figure img{
     object-fit: cover;
     width: 100%;
     height: 100%;
+}
+
+@media(min-width:500px){
+    .gallery_wrapper{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .gallery_wrapper > figure:last-child{
+        grid-column: span 2;
+    }
+
+    .gallery_wrapper > figure{
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+
+    .gallery_wrapper figure:last-child{
+        height: 200px;
+    }
+
+    .wrapper_projects{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .wrapper_projects div:last-child{
+        grid-column: span 2;
+        height: max-content;
+        margin: 0 auto 10px;
+    }
+
+    .project_item{
+        padding: 18px;
+        height: max-content;
+        font-size: 20px;
+    }
+
+    .project_item h2,p{
+        text-align: start;
+    }
+
+    .gallery_wrapper{
+        gap: 0.2rem;
+    }
+}
+
+
+@media(min-width:800px){
+  .gallery_wrapper{
+      grid-template-columns: repeat(4,1fr);
+      grid-template-rows: repeat(3,auto);
+  }
+
+  .span2_col{
+      grid-column: span 2;
+      grid-row: span 1;
+  }
+
+  .span2_row{
+      grid-column: span 1;
+      grid-row: span 2;
+      height: 100%;
+  }
+
+  .wrapper_projects{
+      grid-template-columns: repeat(3,1fr);
+  }
+
+  .wrapper_projects{
+      grid-column: span 1;
+  }
+
+  .wrapper_projects div:last-child{
+      grid-column: span 1;
+      margin: 0;
+      height: 380px;
+      font-size: 20px;
+  }
+  
+  .project_item{
+      height: 380px;
+      text-align: center;
+  }
+
+  .project_item > a{
+      margin: auto 0;
+  }
+
+  .about_me{
+      height: 500px;
+  }
+
+  .wrapper_about{
+      justify-content: center;
+      align-items: center;
+  }
+
+  .about_me_text{
+      width: 60%;
+      font-size: 25px;
+  }
 }
 
 
