@@ -2,10 +2,24 @@
     text-decoration: none;
 }
 
+:root {
+    --black: #171321;
+    --dkblue: #0d314b;
+    --plum: #4b0d49;
+    --hotmag: #ff17e4;
+    --magenta: #e310cb;
+    --aqua: #86fbfb;
+    --white: #f7f8fa;
+    --font-size: 1.3rem;
+    --mono: "Oxygen mono", monospace;
+    --sans: Oxygen, sans-serif;
+
+}
+
 body{
-    padding: 0;
+    padding: 10px;
     margin: 0; 
-    height: 100vh;
+ 
 }
 
 html{
@@ -22,8 +36,8 @@ html{
 .welcome{
     padding: 0;
     margin: 0;
-    width: 100%;
-    height: 500px;
+
+  
     background: var(--sectionBacks);
 }
 
@@ -31,7 +45,7 @@ html{
     display: flex;
     flex-flow: column wrap;
     width: 100%;
-    height: 100%;
+    
     align-items: center;
     margin: 0 auto; 
     color: white;
@@ -89,7 +103,7 @@ html{
     padding: 0;
     margin: 0;
     width: 100%;
-    height: 600px;
+    
     background: var(--divsBacks);
 }
 
@@ -136,7 +150,7 @@ html{
   }
 
   .spc_color{
-      background-color: #ccc;
+    background: var(--dkblue);
       padding: 0;
       margin: 0;
       height: max-content;
@@ -144,16 +158,14 @@ html{
 
   .my_projects{
     padding: 4rem 1rem;
-    padding: 20px;
-    gap: 1rem;
-    height: max-content;
+    padding: 10px;
   }
 
   .my_projects h1{
-      color: aqua;
-      font-family: cursive;
-      font-size: 2rem;
-      margin: 0;
+      color: var(--white);
+      font-family: sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: calc(2.5rem * 1.5);
       padding: 0;
   }
 
@@ -162,28 +174,62 @@ html{
       grid-template-columns: 1fr;
       grid-template-rows: auto;
       gap: 1rem;
-      background-color: red;
+      margin: 20px 0;
+      font-family: var(--mono);
+      
+  }
+
+  .project_item h2{
+      color: var(--white);
+      font-family: var(--mono);
+      font-size: 25px;
+      margin: 0;
   }
  
 
   .project_item .text{
       grid-column: span 2;
+      background-color: var(--black);
+      color: var(--white);
+      padding: 5px;
+  }
+
+  .project_item .text h3{
+     font-family: monospace;
+     font-size: 20px;
+     margin: 0;
+  }
+
+  .project_item .text ul{
+      display: flex;
+      flex-flow: row wrap;
+      gap: 2%;
+      margin:10px 0;
+      padding: 2px 5px;
+  }
+
+  .project_item .text ul li{
+     list-style: none;
+     margin: 0;
+     padding: 0;
   }
 
   .project_item picture{
       grid-column: span 1;
-      width: 100%;
-
+      width: 80%;
+      border-top: 1px solid var(--aqua);
+      border-left: 1px solid var(--aqua);
+      border-radius: 25px;
+      padding: 10px;
   }
 
   .project_item picture img{
       object-fit: cover;
-      width: 100%;
-      height: 100%;
+      width: 95%;
+      border-left: 1px solid var(--aqua);
+      border-top: 1px solid var(--aqua);
+      border-radius: 25px;
   }
-
-
-
 
 
 .gallery{
@@ -198,7 +244,6 @@ html{
 .gallery_wrapper{
     display: grid;
     width: 100%;
-   
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     gap: 0.3%;
@@ -222,7 +267,7 @@ html{
     left: 0;
     z-index: 10;
     width: 100%;
-    height: 100%;
+ 
     display: none;
     justify-content: center;
     align-items: center;
@@ -280,26 +325,9 @@ html{
         height: 200px;
     }
 
-    .wrapper_projects{
-        align-items: center;
-        justify-content: center;
-    }
 
-    .wrapper_projects div{
-        width: 80%;
-        height: max-content;
-        margin: 5px auto;
-    }
 
-    .project_item{
-        padding: 18px;
-        height: 340px;
-        font-size: 20px;
-    }
 
-    .project_item h2,p{
-        text-align: start;
-    }
 
     .gallery_wrapper{
         gap: 0.2rem;
@@ -334,30 +362,7 @@ html{
   }
   
 
-  .wrapper_projects{
-     display: flex;
-     gap: 2%;
-  }
 
- 
-
-  .wrapper_projects div:last-child{
-     
-      margin: 0;
-    
-      font-size: 20px;
-  }
-  
-  .project_item{
-      height: 380px;
-      
-    text-align: center;
-      margin: 0 1px;
-  }
-
-  .project_item > a{
-      margin: auto 0;
-  }
 
   .about_me{
       height: 500px;
