@@ -4,7 +4,7 @@
 
 :root {
     --black: #171321;
-    --dkblue: #0d314b;
+    --dkblue: #052136;
     --plum: #4b0d49;
     --hotmag: #ff17e4;
     --magenta: #e310cb;
@@ -169,17 +169,16 @@ html{
       padding: 0;
   }
 
-  .project_item{
+  .project_item, .reverse{
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: auto;
       gap: 1rem;
       margin: 20px 0;
-      font-family: var(--mono);
-      
+      font-family: var(--mono)   
   }
 
-  .project_item h2{
+  .project_item h2, .reverse h2{
       color: var(--white);
       font-family: var(--mono);
       font-size: 25px;
@@ -194,13 +193,22 @@ html{
       padding: 5px;
   }
 
-  .project_item .text h3{
+  .reverse .text{
+    grid-column: span 2;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 5px;
+  }
+
+  .project_item .text h3, .reverse .text h3{
      font-family: monospace;
      font-size: 20px;
      margin: 0;
   }
 
-  .project_item .text ul{
+  
+
+  .project_item .text ul, .reverse .text ul{
       display: flex;
       flex-flow: row wrap;
       gap: 2%;
@@ -208,14 +216,13 @@ html{
       padding: 2px 5px;
   }
 
-  .project_item .text ul li{
+  .project_item .text ul li, .reverse .text ul li{
      list-style: none;
      margin: 0;
      padding: 0;
   }
 
-  .project_item picture{
-      grid-column: span 1;
+  .project_item picture, .reverse picture{
       width: 80%;
       border-top: 1px solid var(--aqua);
       border-left: 1px solid var(--aqua);
@@ -223,7 +230,7 @@ html{
       padding: 10px;
   }
 
-  .project_item picture img{
+  .project_item picture img, .reverse picture img{
       object-fit: cover;
       width: 95%;
       border-left: 1px solid var(--aqua);
@@ -266,8 +273,7 @@ html{
     top: 0;
     left: 0;
     z-index: 10;
-    width: 100%;
- 
+    width: 100%; 
     display: none;
     justify-content: center;
     align-items: center;
@@ -307,6 +313,49 @@ html{
 
 
 @media(min-width:500px){
+
+    .project_item,.reverse{
+        display: grid;
+        grid-template-columns: repeat(10,1fr);
+        grid-template-rows: auto;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .text{
+        border-radius: 25px;
+    }
+
+   
+    .project_item .text{
+        order: 1;
+        grid-column: 1/6;
+        grid-row: 1/2;
+        height: max-content;
+    }
+
+    .project_item picture{
+        grid-column: 5/11;
+        grid-row: 1/2;
+        width: 100%; 
+    }
+
+     .reverse .text{
+        grid-column: 6/11;
+        grid-row: 1/2;
+        height: max-content;
+        order: 2;
+    }
+    .reverse picture{
+        order: 1;
+        grid-column: 1/7;
+        grid-row: 1/2;
+         width: 100%;
+      }
+
+      .reverse .text ul{
+          flex-flow: row wrap;
+      }
     .gallery_wrapper{
         grid-template-columns: repeat(2,1fr);
     }
@@ -324,11 +373,6 @@ html{
     .gallery_wrapper figure:last-child{
         height: 200px;
     }
-
-
-
-
-
     .gallery_wrapper{
         gap: 0.2rem;
     }
