@@ -33,6 +33,49 @@ html{
 }
 
 
+nav{
+    background-color: var(--plum);
+    color: var(--white);
+    width: 100%;
+}
+
+nav [class*="fa-"]{
+    font-size: 200%;
+    color: var(--aqua);
+    }
+
+
+nav ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+ul li a{
+    color: var(--white);
+    font-size: 20px;
+    font-family: monospace;
+}
+
+nav li:first-child{
+    flex-basis: 100%;
+    text-align: center;
+    align-content: center;
+}
+
+nav .name{ 
+    font-family: var(--mono);
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+
 .welcome{
     padding: 0;
     margin: 0;
@@ -316,6 +359,48 @@ html{
     width: 100%;
 }
 
+.modal{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+   border-radius: 25px;
+    background-color: var(--plum);
+    padding: 7rem 0 3rem 1rem;
+    color: var(--black);
+}
+
+.modal p{
+    margin: 0 auto;
+    
+}
+
+.modal picture{
+    width: 50%;
+    height: 200px;
+    margin: 0;
+}
+
+.modal picture img{
+    object-fit: cover;
+    width: 70%;
+    margin: 10px auto;
+}
+
+.modal .logos{
+    width: 100%;
+    display: flex;
+    gap: 8%;
+    margin: 0;
+    width: 40%;
+    align-items: center;
+}
+
+.modal [class*="fa-"]{
+    font-size: 200%;
+    color: var(--white);
+    }
+
+
 
 @media(min-width:550px){
 
@@ -439,6 +524,7 @@ html{
 }
 
 }
+
 
 
 

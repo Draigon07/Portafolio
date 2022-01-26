@@ -25,4 +25,30 @@ btnCierra.addEventListener('click',()=>{
 })
 
 
+//Create Modal
+
+
+function createElement(el){
+    return document.createElement(el)
+}
+
+function addClassOrId({el,cla,num}){
+    if(num == 1){
+        return el.classList.add(cla)
+    }else{
+      return el.id = cla
+    }
+}
+
+function createModal(){
+    const modal = createElement('section')
+    addClassOrId({cla: 'modal', el: modal, num: 1})
+    const img = createElement('img')
+    const txt = ""
+}
+
+
+
+
+
 
