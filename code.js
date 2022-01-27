@@ -34,18 +34,25 @@ function createElement(el){
 
 function addClassOrId({el,cla,num}){
     if(num == 1){
-        return el.classList.add(cla)
+        return el.classList.toggle(cla)
     }else{
       return el.id = cla
     }
 }
 
-function createModal(){
-    const modal = createElement('section')
-    addClassOrId({cla: 'modal', el: modal, num: 1})
-    const img = createElement('img')
-    const txt = ""
-}
+
+(function Modal(){
+    const modal = document.querySelector('.modal');
+    const contact = document.querySelector('.contact')
+    const close = document.querySelector('.close_modal')
+    contact.addEventListener('click',()=>{
+        addClassOrId({el: modal, cla: 'show', num: 1})
+    })
+    close.addEventListener('click',()=>{
+        modal.classList.remove('show')
+    })
+})()
+
 
 
 

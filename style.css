@@ -17,7 +17,7 @@
 }
 
 body{
-    padding: 1px;
+    padding: 0;
     margin: 0; 
     overflow-x: hidden;
 }
@@ -88,7 +88,7 @@ nav .name{
     display: flex;
     flex-flow: column wrap;
     width: 100%;
-    
+
     align-items: center;
     margin: 0 auto; 
     color: white;
@@ -193,7 +193,7 @@ nav .name{
   }
 
   .spc_color{
-    background: var(--dkblue);
+    background:rgb(36, 35, 35);;
       padding: 0;
       margin: 0;
       height: max-content;
@@ -205,7 +205,7 @@ nav .name{
   }
 
   .my_projects h1{
-      color: var(--white);
+      color: #ccc;
       font-family: sans-serif;
       font-size: 2.5rem;
       margin-bottom: calc(2.5rem * 1.5);
@@ -229,15 +229,14 @@ nav .name{
  
 
   .project_item .text{
-    
-      background-color: var(--black);
+      background-color: rgb(206, 136, 7);
       color: var(--white);
       padding: 5px;
   }
 
   .reverse .text{
     width: 100%;
-    background-color: var(--black);
+    background-color: rgb(206, 136, 7);
     color: var(--white);
     padding: 5px;
   }
@@ -266,8 +265,8 @@ nav .name{
 
   .project_item picture, .reverse picture{
       width: 80%;
-      border-top: 1px solid var(--aqua);
-      border-left: 1px solid var(--aqua);
+      border-top: 1px solid rgb(212, 212, 3);
+      border-left: 1px solid yellow;
       border-radius: 25px;
       padding: 10px;
       transition: all 2s;
@@ -328,7 +327,7 @@ nav .name{
 }
 
 .contenedor_interno{
-    width: 700px;
+    width: 500px;
     height: 600px;
     border: 2px #f3f3f3 solid;
     padding: 1px;
@@ -360,24 +359,47 @@ nav .name{
 }
 
 .modal{
+    position: fixed;
+    top: 50px;
+    right: 20px;
     display: flex;
-    flex-flow: row wrap;
-    width: 100%;
-   border-radius: 25px;
-    background-color: var(--plum);
-    padding: 7rem 0 3rem 1rem;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    border-radius: 25px;
+    background-color: rgb(65, 2, 65);
+    padding: 2rem 0 2rem 1rem;
     color: var(--black);
+    gap: 4%;
+    transition: all .5s ease-in-out;
+    transform: translateY(-140%);
+   
+}
+
+.modal h2{
+    color: var(--white);
+    font-family: var(--mono);
+    font-size: 2.2rem;
 }
 
 .modal p{
-    margin: 0 auto;
+    margin: 15px auto;
+    color: var(--white);
     
 }
 
+.close_modal{
+   align-self: flex-end; 
+   margin-right: 20px;
+ }
+
 .modal picture{
-    width: 50%;
-    height: 200px;
+    width: 60%;
+  
     margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
 .modal picture img{
@@ -389,10 +411,11 @@ nav .name{
 .modal .logos{
     width: 100%;
     display: flex;
-    gap: 8%;
+    gap: 12%;
     margin: 0;
     width: 40%;
     align-items: center;
+    justify-content: center;
 }
 
 .modal [class*="fa-"]{
@@ -473,6 +496,21 @@ nav .name{
     .gallery_wrapper{
         gap: 0.2rem;
     }
+
+    .modal{
+        flex-flow: row wrap;
+    }
+
+    .modal picture{
+        margin:  1px 2px;
+        flex-basis: 70%;
+    }
+
+    .close_modal, .modal .logos{
+        flex-basis: 100%;
+    }
+
+    
 }
 
 
@@ -523,7 +561,39 @@ nav .name{
     height: 300px;
 }
 
+.modal{
+    flex-flow: row wrap;
+    top: 20px;
+    right: 20px;
+    left: auto;
 }
+
+.modal picture{
+    margin:  1px 2px;
+    flex-basis: 50%;
+}
+
+
+.close_modal{
+  align-self: flex-start;
+}
+
+.modal .logos{
+    flex-basis: 100%;
+    margin-top: 30px;
+    gap: 5%;
+}
+
+}
+
+/*Extras*/
+
+.show{
+    transform: translateY(-0);
+    transition: all 0.7s ease-in;
+}
+
+
 
 
 
