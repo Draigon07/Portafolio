@@ -20,10 +20,12 @@ body{
     padding: 0;
     margin: 0; 
     overflow-x: hidden;
+   
 }
 
 html{
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 :root{
@@ -34,9 +36,10 @@ html{
 
 
 nav{
-    background-color: var(--plum);
+    background-color: var(--divsBacks);
     color: var(--white);
     width: 100%;
+    padding: 2.5rem;
 }
 
 nav [class*="fa-"]{
@@ -79,8 +82,6 @@ nav .name{
 .welcome{
     padding: 0;
     margin: 0;
-
-  
     background: var(--sectionBacks);
 }
 
@@ -167,6 +168,7 @@ nav .name{
     padding: 4px;
     margin: 5px 0px;
     text-align: center;
+    order: 1;
 }
 
 .about_me_text button{
@@ -327,8 +329,8 @@ nav .name{
 }
 
 .contenedor_interno{
-    width: 500px;
-    height: 600px;
+    width: 600px;
+    height: 500px;
     border: 2px #f3f3f3 solid;
     padding: 1px;
     display: flex;
