@@ -62,7 +62,7 @@ nav ul{
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 ul li a{
@@ -533,6 +533,16 @@ nav .name{
 
 
 @media(min-width:800px){
+
+    nav li:first-child{
+        flex-basis: auto;
+        text-align: left;
+        margin-right: auto
+    }
+
+    nav ul{
+        gap: 2rem;
+    }
 
     .text_container{
         width: 45%;
